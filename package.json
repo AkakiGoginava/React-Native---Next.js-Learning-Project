@@ -1,0 +1,22 @@
+{
+    "name": "react-native---next.js-learning-project",
+    "version": "1.0.0",
+    "workspaces": ["packages/*", "apps/*"],
+    "private": true,
+    "scripts": {
+        "build": "turbo run build",
+        "dev": "turbo run dev",
+        "lint": "turbo run lint",
+        "typecheck": "turbo run typecheck"
+    },
+    "devDependencies": {
+        "turbo": "latest"
+    },
+    "devEngines": {
+        "packageManager": {
+            "name": "pnpm",
+            "version": "10.30.2"
+        },
+        "node": "24.12.0"
+    }
+}
