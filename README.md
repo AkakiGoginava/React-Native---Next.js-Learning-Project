@@ -2,8 +2,8 @@
 
 ## Prerequisites
 
-- Node.js: 24.12.0
-- pnpm: ^10.30.2
+- Node.js: ^24.12.0
+- pnpm: 12.2.0
 
 ## Installing and running the project
 
