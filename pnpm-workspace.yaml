@@ -2,5 +2,5 @@ packages:
   - packages/*
   - apps/*
 allowBuilds:
-  sharp: false
+  sharp: true
   unrs-resolver: false
