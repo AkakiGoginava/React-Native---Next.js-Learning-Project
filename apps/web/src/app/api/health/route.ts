@@ -6,7 +6,7 @@ export async function GET() {
   return Response.json(
     {
       status: "ok",
-      timestamp: new Date(Date.now()).toISOString(),
+      timestamp: new Date().toISOString(),
     },
     {
       status: 200,
