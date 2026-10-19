@@ -24,3 +24,7 @@ Build:
 ```bash
     pnpm turbo build
 ```
+
+## Running the mobile app
+
+To run the mobile app check mobile app [README](apps/mobile/README.md)
