@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function ProfileScreen(title: string) {
+export default function PlaceholderScreen({ title }: { title: string }) {
   return (
     <View style={styles.container}>
       <Text>{title}</Text>

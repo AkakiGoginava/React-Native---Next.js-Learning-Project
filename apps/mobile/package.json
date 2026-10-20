@@ -28,7 +28,6 @@
   "scripts": {
     "dev": "expo start",
     "lint": "expo lint",
-    "start": "expo run:android",
     "typecheck": "tsc --noEmit"
   },
   "private": true

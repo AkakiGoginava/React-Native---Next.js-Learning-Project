@@ -1,5 +1,5 @@
-import { PlaceholderScreen } from "../../components";
+import { PlaceholderScreen } from "@/components";
 
 export default function ProfileScreen() {
-  return PlaceholderScreen("profile");
+  return <PlaceholderScreen title="Profile" />;
 }
