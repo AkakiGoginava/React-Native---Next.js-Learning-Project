@@ -1,23 +1,32 @@
 {
-    "tasks": {
-        "build": {
-            "dependsOn": ["^build"],
-            "outputs": ["**/dist/**", "**/.next/**", "!**/.next/cache/**", "!**/.next/dev/**"]
-        },
-        "transit": {
-            "dependsOn": ["^transit"]
-        },
-        "lint": {
-            "dependsOn": ["^transit"],
-            "outputs": []
-        },
-        "dev": {
-            "cache": false,
-            "persistent": true
-        },
-        "typecheck": {
-            "dependsOn": ["^build"],
-            "outputs": []
-        }
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        "**/dist/**",
+        "**/.next/**",
+        "!**/.next/cache/**",
+        "!**/.next/dev/**"
+      ]
+    },
+    "transit": {
+      "dependsOn": ["^transit"]
+    },
+    "lint": {
+      "dependsOn": ["^transit"],
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "start": {
+      "cache": false,
+      "persistent": true
+    },
+    "typecheck": {
+      "dependsOn": ["^build"],
+      "outputs": []
     }
+  }
 }

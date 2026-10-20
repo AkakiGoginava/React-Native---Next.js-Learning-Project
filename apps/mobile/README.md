@@ -6,28 +6,26 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 To run a development build on an Android device using Expo Application Services (EAS):
 
-1. Install dependencies
+1. Log into EAS
 
    ```bash
-   pnpm install
+   eas login
    ```
 
-2. Configure the project
+2. Create a build (Only needed when native code changes)
 
    ```bash
-   eas build:configure
-   ```
-
-3. Create a build
-
-   ```bash
+   // From apps/mobile directory
    eas build --platform android --profile development
    ```
 
-4. Download and install the development build on your Android device
+3. Download and install the development build on your Android device
 
-5. Start the app
+4. Start the app
 
    ```bash
-   pnpm expo start
+   // From apps/mobile directory
+   pnpm dev
+   // Or from root directory
+   pnpm turbo dev
    ```

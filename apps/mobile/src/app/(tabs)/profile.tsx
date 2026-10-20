@@ -1,17 +1,5 @@
-import { StyleSheet, Text, View } from "react-native";
+import { PlaceholderScreen } from "../../components";
 
-export default function Tab() {
-  return (
-    <View style={styles.container}>
-      <Text>Profile</Text>
-    </View>
-  );
+export default function ProfileScreen() {
+  return PlaceholderScreen("profile");
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
