@@ -1,4 +1,4 @@
-import { baseConfig } from "@pickup/eslint-config";
+import baseConfig from "@pickup/eslint-config/base";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 import { defineConfig, globalIgnores } from "eslint/config";

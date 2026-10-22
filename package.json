@@ -10,7 +10,8 @@
     "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
-    "turbo": "^2.11.7"
+    "turbo": "^2.11.7",
+    "eslint": "10.13.0"
   },
   "engines": {
     "pnpm": "12.10.0",

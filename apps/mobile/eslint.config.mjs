@@ -1,4 +1,4 @@
-import { baseConfig } from "@pickup/eslint-config";
+import baseConfig from "@pickup/eslint-config/base";
 import expoConfig from "eslint-config-expo/flat.js";
 import { defineConfig } from "eslint/config";
 
