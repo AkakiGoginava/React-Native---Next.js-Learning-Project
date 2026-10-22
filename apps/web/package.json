@@ -1,6 +1,7 @@
 {
   "name": "@pickup/web",
   "version": "0.1.0",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "@pickup/typescript-config": "workspace:*",
+    "@pickup/eslint-config": "workspace:*",
     "@tailwindcss/turbopack": "^4",
     "@types/node": "^24",
     "@types/react": "^19",
@@ -23,6 +25,5 @@
     "eslint-config-next": "16.4.0",
     "tailwindcss": "^4",
     "typescript": "^5"
-  },
-  "private": true
+  }
 }
