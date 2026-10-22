@@ -19,6 +19,7 @@
     "react-native-screens": "~4.30.0"
   },
   "devDependencies": {
+    "@pickup/typescript-config": "workspace:*",
     "@types/react": "~19.3.0",
     "eas-cli": "^25.2.0",
     "eslint": "^9",
