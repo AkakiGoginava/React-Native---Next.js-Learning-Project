@@ -14,7 +14,7 @@ const nextConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
-  ...baseConfig,
+  ...baseConfig, // KEEP PLACED LAST - override default configs.
 ]);
 
 export default nextConfig;

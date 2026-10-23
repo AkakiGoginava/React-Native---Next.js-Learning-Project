@@ -1,3 +1,5 @@
 {
-  "name": "@pickup/typescript-config"
+  "name": "@pickup/typescript-config",
+  "version": "0.0.0",
+  "private": true
 }

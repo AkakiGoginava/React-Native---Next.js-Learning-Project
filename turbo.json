@@ -26,8 +26,6 @@
     },
     "typecheck": {
       "dependsOn": ["^build"]
-    },
-    "format": {},
-    "format:check": {}
+    }
   }
 }

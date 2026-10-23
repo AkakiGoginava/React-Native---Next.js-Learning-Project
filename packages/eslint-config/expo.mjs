@@ -7,7 +7,7 @@ const expoConfig = defineConfig([
   {
     ignores: ["dist/*"],
   },
-  ...baseConfig,
+  ...baseConfig, // KEEP PLACED LAST - override default configs.
 ]);
 
 export default expoConfig;

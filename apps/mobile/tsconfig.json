@@ -1,23 +1,10 @@
 {
-  "extends": "@pickup/typescript-config/base.json",
+  "extends": ["expo/tsconfig.base", "@pickup/typescript-config/base.json"],
   "compilerOptions": {
-    "target": "ESNext",
-    "lib": ["DOM", "ESNext"],
-    "module": "preserve",
-    "moduleDetection": "force",
-    "customConditions": ["react-native"],
     "paths": {
       "@/*": ["./src/*"],
       "@/assets/*": ["./assets/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"],
-  "exclude": [
-    "${configDir}/node_modules",
-    "${configDir}/babel.config.js",
-    "${configDir}/metro.config.js",
-    "${configDir}/jest.config.js",
-    "${configDir}/android",
-    "${configDir}/ios"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]
 }
