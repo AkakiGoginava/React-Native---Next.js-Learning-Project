@@ -219,6 +219,12 @@ catalogs:
 importers:
   .:
     devDependencies:
+      husky:
+        specifier: ^9.1.7
+        version: 9.1.7
+      lint-staged:
+        specifier: ^17.6.0
+        version: 17.6.0
       node:
         specifier: runtime:^24.12.0
         version: runtime:24.22.1
@@ -5691,6 +5697,14 @@ packages:
       }
     engines: { node: ">= 14" }
 
+  husky@9.1.7:
+    resolution:
+      {
+        integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==,
+      }
+    engines: { node: ">=18" }
+    hasBin: true
+
   hyperlinker@1.0.0:
     resolution:
       {
@@ -6429,6 +6443,14 @@ packages:
       {
         integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==,
       }
+
+  lint-staged@17.6.0:
+    resolution:
+      {
+        integrity: sha512-nOhBfYkZEwkFtNzD5pK9s9LkcWoxJ+whLzEnhqi9nl7zTB5n7tg8+9iYgMGx2Wm3VlLu8cbNj0RACzY+nWi5iQ==,
+      }
+    engines: { node: ">=22.22.1" }
+    hasBin: true
 
   locate-path@5.0.0:
     resolution:
@@ -8306,6 +8328,13 @@ packages:
         integrity: sha512-zEzXb0s5Cds7tqMH6rhZ05lcJydCWiQPEwiNngVqzsxCc962vLY4Uw+mW7od8kDH258k2Uz/JrOkdIAAhSh9VA==,
       }
 
+  string-argv@0.3.2:
+    resolution:
+      {
+        integrity: sha512-aqD2Q0144Z+/RqG52NeHEkZauTAUWJO8c6yTftGJKO3Tja5tUgIfmIl6kExvhtxSDP7fXB6DvzkfMpCd/F3G+Q==,
+      }
+    engines: { node: ">=0.6.19" }
+
   string-width@4.2.3:
     resolution:
       {
@@ -8539,6 +8568,13 @@ packages:
       {
         integrity: sha512-fcwX4mndzpLQKBS1DVYhGAcYaYt7vsHNIvQV+WXMvnow5cgjPphq5CaayLaGsjRdSCKZFNGt7/GYAuXaNOiYCA==,
       }
+
+  tinyexec@1.3.1:
+    resolution:
+      {
+        integrity: sha512-GCvB3aoys96IuDFBMcTB46JOR6mdMtAToqwiW8JlWhsoh1mhHi/xn9ss/Dg7N555GiJyEt2qzoG/NHCwM6h1EA==,
+      }
+    engines: { node: ">=18" }
 
   tinyglobby@0.2.17:
     resolution:
@@ -9131,6 +9167,14 @@ packages:
         integrity: sha512-a6ae//JvKDEra2kdi1qzCyrJW/WZCgFi8ydDV+eXExl95t+5R+ijnqHJbz9tmMh8FUjx3iv2fCQ4dclAQlO2UQ==,
       }
     engines: { node: ">= 14" }
+    hasBin: true
+
+  yaml@2.9.1:
+    resolution:
+      {
+        integrity: sha512-3NxN8+78OdzbT7C/WjGsyfPAtJaN3FNDsWxv7Y7mcDsT/oOmgW8BpyQQFFBnvZE3j9Y2Sdz1ULFLezL7Eb2yFw==,
+      }
+    engines: { node: ">= 14.6" }
     hasBin: true
 
   yargs-parser@21.1.1:
@@ -13343,6 +13387,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  husky@9.1.7: {}
+
   hyperlinker@1.0.0: {}
 
   hyphenate-style-name@1.1.0:
@@ -13735,6 +13781,14 @@ snapshots:
   lilconfig@3.1.4: {}
 
   lines-and-columns@1.2.4: {}
+
+  lint-staged@17.6.0:
+    dependencies:
+      picomatch: 4.0.7
+      string-argv: 0.3.2
+      tinyexec: 1.3.1
+    optionalDependencies:
+      yaml: 2.9.1
 
   locate-path@5.0.0:
     dependencies:
@@ -14932,6 +14986,8 @@ snapshots:
       - bare-abort-controller
       - react-native-b4a
 
+  string-argv@0.3.2: {}
+
   string-width@4.2.3:
     dependencies:
       emoji-regex: 8.0.0
@@ -15102,6 +15158,8 @@ snapshots:
       any-promise: 1.3.0
 
   throat@5.0.0: {}
+
+  tinyexec@1.3.1: {}
 
   tinyglobby@0.2.17:
     dependencies:
@@ -15450,6 +15508,9 @@ snapshots:
   yallist@5.0.0: {}
 
   yaml@2.6.0: {}
+
+  yaml@2.9.1:
+    optional: true
 
   yargs-parser@21.1.1: {}
 
