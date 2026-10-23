@@ -2,6 +2,12 @@
   "name": "@pickup/mobile",
   "version": "1.0.0",
   "main": "expo-router/entry",
+  "private": true,
+  "scripts": {
+    "dev": "expo start",
+    "lint": "expo lint",
+    "typecheck": "tsc --noEmit"
+  },
   "dependencies": {
     "@expo/ui": "~58.0.19",
     "expo": "~58.0.12",
@@ -19,16 +25,11 @@
     "react-native-screens": "~4.30.0"
   },
   "devDependencies": {
+    "@pickup/typescript-config": "workspace:*",
+    "@pickup/eslint-config": "workspace:*",
     "@types/react": "~19.3.0",
     "eas-cli": "^25.2.0",
-    "eslint": "^9",
-    "eslint-config-expo": "~58.0.4",
-    "typescript": "~6.0.3"
-  },
-  "scripts": {
-    "dev": "expo start",
-    "lint": "expo lint",
-    "typecheck": "tsc --noEmit"
-  },
-  "private": true
+    "eslint": "catalog:",
+    "typescript": "catalog:"
+  }
 }

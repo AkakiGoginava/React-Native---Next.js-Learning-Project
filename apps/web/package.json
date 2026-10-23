@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "lint": "eslint",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit",
     "start": "next start"
   },
   "dependencies": {
@@ -15,13 +15,14 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@pickup/typescript-config": "workspace:*",
+    "@pickup/eslint-config": "workspace:*",
     "@tailwindcss/turbopack": "^4",
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.4.0",
+    "eslint": "catalog:",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "catalog:"
   }
 }

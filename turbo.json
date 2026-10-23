@@ -13,8 +13,7 @@
       "dependsOn": ["^transit"]
     },
     "lint": {
-      "dependsOn": ["^transit"],
-      "outputs": []
+      "dependsOn": ["^transit"]
     },
     "dev": {
       "cache": false,
@@ -26,8 +25,7 @@
       "dependsOn": ["^build"]
     },
     "typecheck": {
-      "dependsOn": ["^build"],
-      "outputs": []
+      "dependsOn": ["^build"]
     }
   }
 }
