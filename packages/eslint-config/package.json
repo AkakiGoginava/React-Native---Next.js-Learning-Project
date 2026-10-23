@@ -4,12 +4,21 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./base": "./base.mjs"
+    "./expo": "./expo.mjs",
+    "./next": "./next.mjs"
+  },
+  "dependencies": {
+    "@eslint/js": "^9",
+    "typescript-eslint": "catalog:",
+    "eslint-config-expo": "~58.0.4",
+    "eslint-config-next": "16.4.0"
   },
   "peerDependencies": {
-    "eslint": "^9"
+    "eslint": "catalog:",
+    "typescript": "catalog:"
   },
   "devDependencies": {
-    "eslint": "^9"
+    "eslint": "catalog:",
+    "typescript": "catalog:"
   }
 }

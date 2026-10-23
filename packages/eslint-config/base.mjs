@@ -1,8 +1,11 @@
+import js from "@eslint/js";
 import { defineConfig } from "eslint/config";
+import tseslint from "typescript-eslint";
 
 const baseConfig = defineConfig([
   {
-    rules: {},
+    files: ["**/*.{js,ts,jsx,tsx}"],
+    extends: [js.configs.recommended, tseslint.configs.recommended],
   },
 ]);
 
