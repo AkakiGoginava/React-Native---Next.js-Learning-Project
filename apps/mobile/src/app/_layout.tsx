@@ -9,9 +9,10 @@ export default function RootLayout() {
     async function checkHealth() {
       try {
         // NOTE: move URL resolution logic to a utility helper function in RNNJLP-18
+        const portRegex = new RegExp(":\\d+$");
         const hostUri = Constants.expoConfig?.hostUri;
         const url = hostUri
-          ? `http://${hostUri}/health/api`
+          ? `http://${hostUri.replace(portRegex, ":3000")}/api/health`
           : process.env.EXPO_PUBLIC_API_URL;
 
         if (!url) throw new Error("API url not configured");
@@ -26,10 +27,10 @@ export default function RootLayout() {
           throw new Error(`Rejected with status code ${res.status}`);
         }
       } catch (error: unknown) {
-        if (error instanceof Error) {
-          console.error("Health status error: ", error.message);
-        } else if (error instanceof z.ZodError) {
+        if (error instanceof z.ZodError) {
           console.error(error.message);
+        } else if (error instanceof Error) {
+          console.error("Health status error: ", error.message);
         } else {
           console.error(error);
         }
