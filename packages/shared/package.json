@@ -1,0 +1,21 @@
+{
+  "name": "@pickup/shared",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@pickup/typescript-config": "workspace:*",
+    "@pickup/eslint-config": "workspace:*",
+    "typescript": "catalog:",
+    "eslint": "catalog:"
+  },
+  "exports": {
+    "./api": "./api.ts"
+  }
+}
