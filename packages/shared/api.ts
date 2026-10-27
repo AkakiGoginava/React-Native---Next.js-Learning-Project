@@ -1,7 +1,7 @@
 import * as z from "zod";
 
 export const HealthResponseSchema = z.object({
-  status: z.string(),
+  stat: z.literal("ok"),
   timestamp: z.iso.datetime(),
 });
 

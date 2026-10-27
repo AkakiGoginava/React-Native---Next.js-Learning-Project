@@ -1,4 +1,4 @@
-import { HealthResponse } from "@pickup/shared/api";
+import type { HealthResponse } from "@pickup/shared/api";
 
 async function handleUnsupportedMethod() {
   return Response.json({ message: "Unsupported method" }, { status: 405 });

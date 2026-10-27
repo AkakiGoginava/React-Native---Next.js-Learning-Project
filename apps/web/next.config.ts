@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
       },
     },
   },
-  transpilePackages: ["@pockup/shared"],
+  transpilePackages: ["@pickup/shared"],
 };
 
 export default nextConfig;
