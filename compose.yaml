@@ -1,0 +1,32 @@
+x-healthcheck-defaults: &hc-defaults
+  interval: 30s
+  timeout: 10s
+  retries: 3
+  start_period: 40s
+
+services:
+  postgres_db:
+    image: postgis/postgis:18-3.6
+    restart: unless-stopped
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - ./docker/postgres/init:/docker-entrypoint-initdb.d:ro
+      - pgdata:/var/lib/postgresql
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB:?Postgres DB name not configured}
+      - POSTGRES_USER=${POSTGRES_USER:?Postgres user not configured}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:?Postgres password not configured}
+    healthcheck:
+      <<: *hc-defaults
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+  redis_db:
+    image: redis:8.10.3
+    restart: always
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    healthcheck:
+      <<: *hc-defaults
+      test: ["CMD", "redis-cli", "ping"]
+volumes:
+  pgdata:
