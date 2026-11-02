@@ -9,7 +9,7 @@ export default function RootLayout() {
     async function checkHealth() {
       try {
         const apiUrl = getApiUrl();
-        const res = await fetch(apiUrl);
+        const res = await fetch(`${apiUrl}/api/health`);
 
         if (res.ok) {
           const data = await res.json();

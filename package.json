@@ -13,7 +13,8 @@
     "prepare": "husky",
     "db:up": "docker compose up -d --wait",
     "db:down": "docker compose down",
-    "db:restart": "docker compose restart"
+    "db:restart": "docker compose restart",
+    "db:reset": "docker compose down -v && docker compose up -d --wait"
   },
   "devDependencies": {
     "husky": "^9.1.7",
