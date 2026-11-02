@@ -10,7 +10,11 @@
     "typecheck": "turbo run typecheck",
     "format": "pnpm prettier . --write",
     "format:check": "pnpm prettier . --check",
-    "prepare": "husky"
+    "prepare": "husky",
+    "db:up": "docker compose up -d --wait",
+    "db:down": "docker compose down",
+    "db:restart": "docker compose restart",
+    "db:reset": "docker compose down -v && docker compose up -d --wait"
   },
   "devDependencies": {
     "husky": "^9.1.7",
