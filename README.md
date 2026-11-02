@@ -52,11 +52,11 @@ To end services run:
 
 To connect to Postgres database via GUI client use following values for fields:
 
-    -  Host: `127.0.0.1`
-    -  Port: `POSTGRES_PORT` (`5432` by default)
-    -  User: `POSTGRES_USER`
-    -  Password: `POSTGRES_PASSWORD`
-    -  DB name: `POSTGRES_DB` (`test_db` for test database)
+- Host: `127.0.0.1`
+- Port: `POSTGRES_PORT` (`5432` by default)
+- User: `POSTGRES_USER`
+- Password: `POSTGRES_PASSWORD`
+- DB name: `POSTGRES_DB` (`test_db` for test database)
 
 4. Run dev:
 

@@ -19,7 +19,11 @@ services:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:?Postgres password not configured}
     healthcheck:
       <<: *hc-defaults
-      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB} -h 127.0.0.1",
+        ]
   redis_db:
     image: redis:8.10.3
     restart: unless-stopped
