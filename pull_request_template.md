@@ -11,11 +11,15 @@ For Conventional Commits use: feat(auth): add google oauth login
 
 <!-- Provide a checklist of acceptance criteria from the Jira ticket -->
 
-- []
-- []
-- []
-- []
+- [ ]
+- [ ]
+- [ ]
+- [ ]
 
 ## Description
 
-<!-- Provide a description of what changes and why accompanied with how it was tested -->
+<!-- Provide a description of what changes and why -->
+
+## Testing
+
+<!-- Provide description of how it was tested -->

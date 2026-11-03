@@ -24,7 +24,7 @@
   },
   "engines": {
     "pnpm": "12.10.0",
-    "node": ">=24.12.0"
+    "node": "24.12.0"
   },
   "devEngines": {
     "packageManager": {
@@ -34,7 +34,7 @@
     },
     "runtime": {
       "name": "node",
-      "version": "^24.12.0",
+      "version": "24.12.0",
       "onFail": "download"
     }
   }
