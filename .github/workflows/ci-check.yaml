@@ -1,0 +1,49 @@
+name: CI Check
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  run_ci_check:
+    name: Run CI Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v6
+
+      - name: Install pnpm and Node.js
+        uses: pnpm/setup@v3
+        with:
+          runtime: node
+          cache: true
+          install: false
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Cache Turborepo local cache
+        uses: actions/cache@v6
+        with:
+          path: |
+            .turbo
+          key: turbo-${{ runner.os }}-${{ github.sha }}
+          restore-keys: |
+            turbo-${{ runner.os }}
+
+      - name: Run format Check
+        run: pnpm format:check
+
+      - name: Run lint and typecheck
+        run: pnpm turbo run lint typecheck
