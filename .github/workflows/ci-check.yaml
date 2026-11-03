@@ -38,3 +38,12 @@ jobs:
 
       - name: Run format Check
         run: pnpm format:check
+
+      - name: Cache Turborepo local cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            .turbo
+          key: turbo-${{ runner.os }}-${{ github.sha }}
+          restore-keys: |
+            turbo-${{ runner.os }}
