@@ -109,3 +109,4 @@ Unique, primary and foreign key notations are in the diagram.
 - How should capacity be enforced when two requests arrive at the same time?
 - Should `user` be able to reactivate?
 - Should `user` change queue position after rejoining a game and if yes, how should it be handled?
+- What happens to upcoming `games` when user deactivates?
