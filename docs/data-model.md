@@ -65,7 +65,7 @@ Unique, primary and foreign key notations are in the diagram.
 - `username` and `display_name` must be shorter than 20 chars (placeholder value).
 - `UNIQUE(email)`: case insensitive.
 - `password` saved as a hash.
-- Deleting account should keep user row but set its `is_active` column to false and `status` for respective `game_participant` that are not already set to `left` shoud be set to `left`.
+- Deleting account should keep user row but set its `is_active` column to false and `status` for respective `game_participant` that are not already set to `Left` shoud be set to `Left`.
 
 ### game_participants
 
@@ -96,9 +96,9 @@ Unique, primary and foreign key notations are in the diagram.
 
 ## Queries
 
-- Upcoming games - `SELECT * FROM gmaes WHERE NOT is_cancelled AND starts_at > now() ORDER BY starts_at ASC, id ASC LIMIT 20` | `starts_at` should be partially indexed with regard to `is_cancelled` for faster sorting and filtering.
-- My games - `SELECT * FROM games WHERE organizer_id = $1`.
-- Participating games - `SELECT g.* FROM games g JOIN game_participants gp ON g.id = gp.game_id WHERE gp.user_id = $1 AND NOT gp.status = 'left' ORDER BY g.starts_at ASC, g.id ASC LIMIT 20` | Includes all games except for ones that the user has left. `game_participants.user_id` is indexed.
+- Upcoming games - `SELECT * FROM games WHERE NOT is_cancelled AND starts_at > now() ORDER BY starts_at ASC, id ASC LIMIT 20` | `starts_at` should be partially indexed with regard to `is_cancelled` for faster sorting and filtering.
+- My games - `SELECT * FROM games WHERE organizer_id = $1`. `organizer_id` is indexed.
+- Participating games - `SELECT g.* FROM games g JOIN game_participants gp ON g.id = gp.game_id WHERE gp.user_id = $1 AND NOT gp.status = 'Left' ORDER BY g.starts_at ASC, g.id ASC LIMIT 20` | Includes all games except for ones that the user has left. `game_participants.user_id` is indexed.
 - Games players - `SELECT * FROM game_participants WHERE game_id = $1.` | `UNIQUE` already indexes `game_id`, whereas `user_id` should be indexed separately.
 
 ## Open questions
