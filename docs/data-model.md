@@ -15,7 +15,7 @@ erDiagram
         text username UK
         text display_name
         citext email UK
-        text password_hash
+        text password
         bool is_active
         timestamptz created_at
         timestamptz updated_at

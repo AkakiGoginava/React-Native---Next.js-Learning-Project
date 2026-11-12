@@ -1,0 +1,23 @@
+{
+  "name": "@pickup/db",
+  "version": "0.0.0",
+  "private": "true",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "drizzle-orm": "1.0.0-rc.5",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "@pickup/eslint-config": "workspace:*",
+    "@pickup/typescript-config": "workspace:*",
+    "@types/pg": "^8.23.1",
+    "drizzle-kit": "1.0.0-rc.5",
+    "eslint": "catalog:",
+    "tsx": "^4.23.15",
+    "typescript": "catalog:"
+  }
+}

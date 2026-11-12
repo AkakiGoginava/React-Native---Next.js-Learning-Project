@@ -3,6 +3,7 @@ packages:
   - apps/*
 allowBuilds:
   dtrace-provider: false
+  esbuild: set this to true or false
   protobufjs: false
   sharp: true
   unrs-resolver: false

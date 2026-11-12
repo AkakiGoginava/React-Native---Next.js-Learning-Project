@@ -9,7 +9,7 @@ services:
     image: postgis/postgis:18-3.6
     restart: unless-stopped
     ports:
-      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+      - "${POSTGRES_HOST_IP:-127.0.0.1}:${POSTGRES_PORT:-5432}:5432"
     volumes:
       - ./docker/postgres/init/11-create-test-db.sql:/docker-entrypoint-initdb.d/11-create-test-db.sql:ro
       - pgdata:/var/lib/postgresql
@@ -22,13 +22,13 @@ services:
       test:
         [
           "CMD-SHELL",
-          "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB} -h 127.0.0.1",
+          "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB} -h $${POSTGRES_HOST_IP:-127.0.0.1}",
         ]
   redis_db:
     image: redis:8.10.3
     restart: unless-stopped
     ports:
-      - "127.0.0.1:${REDIS_PORT:-6379}:6379"
+      - "${REDIS_HOST_IP:-127.0.0.1}:${REDIS_PORT:-6379}:6379"
     volumes:
       - redisdata:/data
     healthcheck:
